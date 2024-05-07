@@ -86,7 +86,8 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc""")
 if ! command -v gpg &> /dev/null
 then
     echo "GPG could not be found. Please install GPG to continue."
-    exit 1
+    sudo apt-get install gnupg2 -y
+        
 fi
 
 # Setting default email
