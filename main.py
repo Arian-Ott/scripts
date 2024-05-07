@@ -67,11 +67,19 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc""")
         os.system("ufw allow 22")
         x.update(1)
         os.system("ufw allow 80")
+
+        x.update(1)
+        os.system("ufw allow 8000")
+        x.update(1)
+        os.system("ufw allow 9443")
         x.update(1)
         os.system("ufw allow 443")
         x.update(1)
         os.system("ufw enable")
         x.update(1)
+    if lul["git"]:
+
+        os.system("bash key.sh")
 
 
 
